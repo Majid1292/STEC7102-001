@@ -1,9 +1,30 @@
-img{
-    height:10%; 
-    width:20%;
-}
 
 header img{
     height:18%; 
     width:80%;
+}
+#Uwindsor{
+    float: right;
+    width: 200px;
+    padding-left: 10px;
+}
+
+#AnimalC {
+    width: 200px;
+}
+figure {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+figcaption {
+    position:absolute;
+    top: 40%;
+    left: 50px;
+    color: brown;
+}
+.hide{
+    display: none;
 }
