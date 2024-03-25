@@ -4,9 +4,7 @@ header img{
     width:80%;
 }
 #Uwindsor{
-    float: right;
     width: 200px;
-    padding-left: 10px;
 }
 
 #AnimalC {
@@ -15,16 +13,18 @@ header img{
 figure {
     width: 200px;
     height: 200px;
-    position: relative;
-    top: 50px;
-    left: 50px;
 }
 figcaption {
     position:absolute;
     top: 40%;
-    left: 50px;
+    left: 10%;
     color: brown;
 }
 .hide{
     display: none;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
