@@ -48,7 +48,6 @@ section.images{grid-area: images;}
     
 }
 
-$number:2;
 #Uwindsor{
     transition: width 3s;
 }
