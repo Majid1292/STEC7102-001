@@ -58,3 +58,13 @@ section.images{grid-area: images;}
     transform: scale(2);
 }
 
+.brown {
+    background-color: brown;
+    color: beige;
+}
+
+.box {
+    border: dashed 2pt black;
+    margin: 3em;
+}
+
