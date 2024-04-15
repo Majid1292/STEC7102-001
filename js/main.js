@@ -31,7 +31,7 @@ bar.addEventListener("mousedown", event => {
     if (event.button == 0) {
         lastX = event.clientX;
         window.addEventListener("mousemove", moved);
-        event.preventDefault;
+        event.preventDefault();
     } 
 })
 
@@ -45,4 +45,24 @@ function moved(event) {
         lastX = event.clientX;
     }
 
+}
+
+let google = document.querySelector("section>a"); 
+google.addEventListener("click", event => {
+    console.log("Nope.");
+    event.preventDefault();
+})
+
+
+let help =  document.querySelector("#help");
+let inputs = document.querySelectorAll("input");
+for (let input of Array.from(inputs)) {
+    console.log("test");
+    input.addEventListener("focus", event => {
+        let text = event.target.getAttribute("hint-help");
+        help.textContent = text;
+    })
+    input.addEventListener("blur", event => {
+        help.textContent="";
+    })
 }
