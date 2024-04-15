@@ -42,12 +42,6 @@ aside {
 footer {grid-area: footer;}
 section.images{grid-area: images;}
 
-@keyframes animation1 {
-    from {background-color: red;}
-    to {background-color: skyblue;}
-    
-}
-
 #Uwindsor{
     transition: width 3s;
 }
