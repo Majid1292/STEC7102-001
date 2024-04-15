@@ -62,3 +62,9 @@ section.images{grid-area: images;}
     margin: 3em;
 }
 
+footer>div {
+    background-color: orangered;
+    width: 60px;
+    height: 15px;
+}
+
