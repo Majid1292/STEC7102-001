@@ -29,6 +29,12 @@
             <li>JavaScript</li>
         </ul>
         <a href="https://www.google.com"> Google</a>
+        <br>
+        <br>
+
+        <button>A</button>
+        <button>B</button>
+        <button>C</button>
 
     </section>
     
@@ -47,7 +53,10 @@
             we want to invite you to this survey to learn about why that might be,
             and if you would be interested in participating in the future. 
             Your opinion matters to us too. "</p>
-            <button>Show more</button>
+            <p id="withButton"> 
+                <button id="showMoreBtn">Show more</button>
+                This is a sample text for testing <strong> Propagation</strong>
+            </p>
     </article>
     
 
@@ -74,10 +83,16 @@
         <br>
         <br>
         This is the aside
-
-        <p>Name: <input type="text" hint-help="Your full name" ></p>
-        <p>Age: <input type="text" hint-help=" Your age in years"></p>
-        <p id="help"></p>
+        <form id="infoForm">
+            <p>Name: <input id="name" name="name" 
+                type="text"  hint-help="Your full name" ></p>
+            <p>Age: <input name="age" type="number"  
+                 hint-help=" Your age in years" required></p>
+            <input type="submit">
+            <br>
+            <p id="help"></p>
+        </form>
+        
     </aside>
 
     <footer id="footerId">

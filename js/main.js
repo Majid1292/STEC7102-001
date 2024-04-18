@@ -1,18 +1,21 @@
 "use strict";
 
-const button = document.querySelector('button');
-button.addEventListener('click',showMore);
-
-
-function showMore() {
+const pTagWithButton = document.querySelector('#withButton');
+pTagWithButton.addEventListener('click',function(){
+    console.log("Hello from p tag");
+})
+const button = document.querySelector('#showMoreBtn');
+button.addEventListener('click',event => 
+ {  
+    event.stopPropagation();
     let p = document.createElement("p");
     let content = document.createTextNode("This is more information about U of Windsor");
     p.appendChild(content);
 
     let article = document.querySelector("article");
     article.appendChild(p);
-    button.removeEventListener('click',showMore);
-}
+});
+
 let footer = document.querySelector("footer");
 window.addEventListener('keydown', function(event) {
     this.console.log(event.key + " pressed");
@@ -67,3 +70,26 @@ for (let input of Array.from(inputs)) {
         help.textContent="";
     })
 }
+
+
+const form = document.querySelector("#infoForm");
+form.addEventListener("submit", event => {
+    let nameValue = document.querySelector("#name").value;
+    if (nameValue == null ||  nameValue=="" || nameValue==" ") {
+        help.textContent="You must fill Name input box";
+        event.preventDefault();
+    }
+
+
+} )
+const section = document.querySelector("section.content");
+
+section.addEventListener('click', event => {
+    // console.log("you clicked somewhere on the section");
+    if (event.target.nodeName == "BUTTON") {
+        if (event.target.textContent == "A") {
+            section.style.background = "lightgreen";
+        }
+        console.log("Clicked" , event.target.textContent)
+    }
+})
