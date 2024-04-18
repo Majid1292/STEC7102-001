@@ -13,15 +13,16 @@ function showMore() {
     article.appendChild(p);
     button.removeEventListener('click',showMore);
 }
-
+let footer = document.querySelector("footer");
 window.addEventListener('keydown', function(event) {
+    this.console.log(event.key + " pressed");
     if (event.key=='b') {
-        this.document.body.style.background = "skyblue";
+        footer.style.background = "skyblue";
     }
 })
 window.addEventListener('keyup', event => {
     if (event.key=='b') {
-        this.document.body.style.background = "";
+        footer.style.background = "";
     }
 })
 
@@ -57,7 +58,7 @@ google.addEventListener("click", event => {
 let help =  document.querySelector("#help");
 let inputs = document.querySelectorAll("input");
 for (let input of Array.from(inputs)) {
-    console.log("test");
+    // console.log("test");
     input.addEventListener("focus", event => {
         let text = event.target.getAttribute("hint-help");
         help.textContent = text;
